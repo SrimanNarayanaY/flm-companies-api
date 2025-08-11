@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db";
+import companyRouter from "./routes/companyRouter";
 
 dotenv.config();
 
@@ -12,6 +13,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
+
+app.use("/company", companyRouter);
 
 // Connect to MongoDB
 connectDB();
