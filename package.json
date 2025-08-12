@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "seed:company": "ts-node src/seeders/companySeeder.ts"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.9.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^5.1.0",
